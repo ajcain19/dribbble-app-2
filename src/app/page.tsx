@@ -1,33 +1,14 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import Image from "next/image";
+import styles from "./page.module.css";
+import { Button } from "dribbble-app";
+import { Hero } from "dribbble-app";
+import { Callout } from "dribbble-app";
+import { Footer } from "dribbble-app";
 
 export default function Home() {
   return (
     <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
+      <h1>Dribbble-App | App #2 | Design System by Anthony Cain</h1>
       <div className={styles.center}>
         <Image
           className={styles.logo}
@@ -38,6 +19,26 @@ export default function Home() {
           priority
         />
       </div>
+
+      <h2>Button</h2>
+      <Button label="This is a Button" />
+      <hr />
+      <h2>Callout</h2>
+      <Callout
+        heading="This is a Callout"
+        blurb="This is blurb text"
+        linkDescription="This is a Link NOW"
+      />
+      <hr />
+      <h2>Hero</h2>
+      <Hero
+        heading="This is a Hero"
+        blurb="This is a blurb"
+        linkDescription="This is a link"
+      />
+      <hr />
+      <h2>Footer</h2>
+      <Footer label="This is a Footer" />
 
       <div className={styles.grid}>
         <a
@@ -91,5 +92,5 @@ export default function Home() {
         </a>
       </div>
     </main>
-  )
+  );
 }
